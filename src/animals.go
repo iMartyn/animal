@@ -19,7 +19,7 @@ var Animals = []AnimalData{
 	{"Badger", "growled", "https://upload.wikimedia.org/wikipedia/commons/1/10/Badger-badger.jpg"},
 	{"Bat", "screeched", "https://upload.wikimedia.org/wikipedia/commons/6/66/Short-nosed_Fruit_Bat_%28Cynopterus_sphinx%29_Photograph_By_Shantanu_Kuveskar.jpg"},
 	{"Bear", "roared", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Kamchatka_Brown_Bear_near_Dvuhyurtochnoe_on_2015-07-23.jpg/1200px-Kamchatka_Brown_Bear_near_Dvuhyurtochnoe_on_2015-07-23.jpg"},
-	{"Bee", "buzz", "https://upload.wikimedia.org/wikipedia/commons/7/76/Tetragonula_carbonaria_%2814521993792%29.jpg"},
+	{"Bee", "buzzed", "https://upload.wikimedia.org/wikipedia/commons/7/76/Tetragonula_carbonaria_%2814521993792%29.jpg"},
 	{"Tiger", "snarled", "https://upload.wikimedia.org/wikipedia/commons/d/da/Panthera_tigris_tigris_Tidoba_20150306.jpg"},
 	{"Lion", "roared", "https://upload.wikimedia.org/wikipedia/commons/d/da/Panthera_tigris_tigris_Tidoba_20150306.jpg"},
 	{"Panther", "growled", "https://upload.wikimedia.org/wikipedia/commons/f/fc/Jaguar.jpg"},
