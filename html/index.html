@@ -51,7 +51,7 @@
             </style>
           </head>
           <body class="text-center">
-                <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+                <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" style="background-image: url('{{.Animal.PictureURL}}'); background-repeat: no-repeat; background-position: center;">
                 <header class="masthead mb-auto">
                 <div class="inner">
                   <h3 class="masthead-brand">k8s-zoo</h3>
@@ -61,7 +61,7 @@
                 </div>
                 </header>
                 <main role="main" class="inner cover">
-                        <h1 class="cover-heading">The {{.Animal.AnimalName}} {{.Animal.AnimalSound}}</h1>
+                        <h1 class="cover-heading" style="text-shadow: 2px 2px black;">The {{.Animal.AnimalName}} {{.Animal.AnimalSound}}</h1>
                 </main>
         <footer class="mastfoot mt-auto">
                 <div class="inner">
