@@ -1,6 +1,9 @@
 package animal
 
 import (
+	"encoding/json"
+	"io/ioutil"
+	"os"
 	"strings"
 )
 
@@ -91,7 +94,7 @@ var AnimalName = "unknown animal"
 
 func FindAnimal(animalName string) AnimalData {
 	for _, listItem := range Animals {
-		if strings.EqualFold(listItem.AnimalName, animalName) {
+		if strings.EqualFold(listItem.AnimalName, strings.Trim(animalName," ")) {
 			return listItem
 		}
 	}
@@ -102,9 +105,25 @@ func FindAnimal(animalName string) AnimalData {
 
 func FindAnimalID(animalName string) int {
 	for i, listItem := range Animals {
-		if strings.EqualFold(listItem.AnimalName, animalName) {
+		if strings.EqualFold(listItem.AnimalName, strings.Trim(animalName," ")) {
 			return i
 		}
 	}
 	return -1
+}
+
+func AddAnimals(path string) {
+	jsonFile, err := os.Open(path)
+	// if we os.Open returns an error then handle it
+	if err != nil {
+		return
+	}
+	// defer the closing of our jsonFile so that we can parse it later on
+	defer jsonFile.Close()
+	var additionalAnimals []AnimalData
+	byteValue, _ := ioutil.ReadAll(jsonFile)
+	json.Unmarshal(byteValue, &additionalAnimals)
+	for _, item := range additionalAnimals {
+		Animals = append(Animals, item)
+	}
 }

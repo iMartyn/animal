@@ -10,7 +10,7 @@ import (
 
 func main() {
 	var animalname string
-
+	animal.AddAnimals("etc/animals.json")
 	var rootCmd = &cobra.Command{
 		Use:   "animal",
 		Short: "animal is a quick go app to use in k8s turorials",
