@@ -14,9 +14,9 @@ func main() {
 	var rootCmd = &cobra.Command{
 		Use:   "animal",
 		Short: "animal is a quick go app to use in k8s turorials",
-		Long: `animal takes an animal name and displays a statement`,
+		Long:  `animal takes an animal name and displays a statement`,
 		Run: func(cmd *cobra.Command, args []string) {
-			if (len(animalname) > 0) {
+			if len(animalname) > 0 {
 				animalFound := animal.FindAnimal(animalname)
 				if animalFound.AnimalName == "" {
 					fmt.Printf("I don't know what sound a %s makes.\n", animalname)
@@ -30,14 +30,14 @@ func main() {
 		},
 	}
 	var serveCmd = &cobra.Command{
-		Use: "serve",
+		Use:   "serve",
 		Short: "Serve http requests",
-		Long: "Run the webserver to serve http requests",
+		Long:  "Run the webserver to serve http requests",
 		Run: func(cmd *cobra.Command, args []string) {
 			animal.HandleHTTP()
 		},
 	}
-	
+
 	rootCmd.Flags().StringVarP(&animalname, "animalname", "p", "", "Animal name")
 	serveCmd.Flags().StringVarP(&animal.AnimalName, "animalname", "p", "", "Animal name")
 	rootCmd.AddCommand(serveCmd)
